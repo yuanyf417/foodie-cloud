@@ -7,7 +7,6 @@ import com.imooc.item.pojo.ItemsParam;
 import com.imooc.item.pojo.ItemsSpec;
 import com.imooc.item.pojo.vo.CommentLevelCountsVO;
 import com.imooc.item.pojo.vo.ItemInfoVO;
-import com.imooc.item.pojo.vo.ShopcartVO;
 import com.imooc.item.service.ItemService;
 import com.imooc.pojo.IMOOCJSONResult;
 import com.imooc.pojo.PagedGridResult;
@@ -43,7 +42,7 @@ public class ItemsController extends BaseController {
         if(StringUtils.isBlank( itemId )){
             return IMOOCJSONResult.errorMsg( null );
         }
-        Items items = itemService.queryitemById( itemId );
+        Items items = itemService.queryItemById( itemId );
         List<ItemsImg> itemsImgs = itemService.queryItemImgList( itemId );
         List<ItemsSpec> itemsSpecs = itemService.queryItemSpecList( itemId );
         ItemsParam itemsParam = itemService.queryItemParam( itemId );

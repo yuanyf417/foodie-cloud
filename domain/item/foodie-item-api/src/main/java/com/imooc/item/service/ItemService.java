@@ -30,7 +30,7 @@ public interface ItemService {
      * @return
      */
     @GetMapping("item")
-    Items queryitemById(@RequestParam("itemId") String itemId);
+    Items queryItemById(@RequestParam("itemId") String itemId);
     /**
      * 根据商品ID 查询商品图片列表
      * @param itemId

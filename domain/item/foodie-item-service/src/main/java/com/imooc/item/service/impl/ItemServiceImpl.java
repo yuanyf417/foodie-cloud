@@ -52,7 +52,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
-    public Items queryitemById(String itemId) {
+    public Items queryItemById(String itemId) {
         return itemsMapper.selectByPrimaryKey( itemId );
     }
 

@@ -22,14 +22,14 @@ public class BaseController {
     public static final String REDIS_USER_TOKEN = "redis_user_token";
 
     // 支付中心的调用地址
-    String paymentUrl = "http://payment.t.mukewang.com/foodie-payment/payment/createMerchantOrder";
+    public String paymentUrl = "http://payment.t.mukewang.com/foodie-payment/payment/createMerchantOrder";
     // String paymentUrl = "http://localhost:8089/payment/createMerchantOrder";
     // String paymentUrl = "http://localhost:8089/payment/createMerchantOrder";
 
     // 微信支付成功 -> 支付中心 -> 天天吃货平台
     //String payReturnUrl = "http://localhost:8088/orders/notifyMerchantOrderPaid";
     //String payReturnUrl = "http://5vyqyi.natappfree.cc/orders/notifyMerchantOrderPaid";
-    String payReturnUrl = "http://api.z.yuanyanfei.cn:8081/orders/notifyMerchantOrderPaid";
+    public String payReturnUrl = "http://api.z.yuanyanfei.cn:8081/orders/notifyMerchantOrderPaid";
 
     // 用户上传头像位置
     public static final String IMAGE_USER_FACE_LOCATION = File.separator + "imoocWorkspace" + File.separator + "images" + File.separator + "foodie" + File.separator + "faces";
