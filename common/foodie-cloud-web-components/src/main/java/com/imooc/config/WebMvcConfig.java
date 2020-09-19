@@ -1,6 +1,5 @@
 package com.imooc.config;
 
-import com.imooc.config.interceptor.UserTokenInterceptor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,16 +43,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return restTemplateBuilder.build();
     }
 
-    @Bean
+   /* @Bean
     public UserTokenInterceptor userTokenInterceptor() {
         return new UserTokenInterceptor();
     }
 
-    /**
+    *//**
      * 添加拦截器
      *
      * @param registry
-     */
+     *//*
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
@@ -75,5 +74,5 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .excludePathPatterns( "/orders/notifyMerchantOrderPaid" )
         ;
         WebMvcConfigurer.super.addInterceptors( registry );
-    }
+    }*/
 }
