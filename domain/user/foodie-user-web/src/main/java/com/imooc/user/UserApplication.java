@@ -1,4 +1,4 @@
-package com.imooc.item;
+package com.imooc.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,16 +10,16 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @program: foodie-cloud
  * @description: TODO
  * @author: YYF
- * @create: 2020-09-19 21:28
+ * @create: 2020-09-19 23:46
  **/
 @SpringBootApplication//(exclude = {SecurityAutoConfiguration.class})
-@MapperScan(basePackages = "com.imooc.item.mapper")
+@MapperScan(basePackages = "com.imooc.user.mapper")
 @ComponentScan(basePackages = {"com.imooc","org.n3r.idworker"})
 @EnableDiscoveryClient
 // TODO feign 注解
-public class ItemApplication {
+public class UserApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run( ItemApplication.class, args );
+        SpringApplication.run( UserApplication.class, args );
     }
 }

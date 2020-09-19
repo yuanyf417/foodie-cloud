@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
@@ -19,7 +20,7 @@ import java.util.Date;
  * @author: YYF
  * @create: 2020-05-09 01:59
  **/
-@Service
+@RestController
 public class CenterUserServiceImpl implements CenterUserService {
 
     @Autowired
