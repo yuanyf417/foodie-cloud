@@ -1,0 +1,33 @@
+server:
+  port: 10004
+
+spring:
+  datasource:
+    # 拆分数据源到独立database instance， 或者独立schema
+    url: jdbc:mysql://192.168.1.103:3306/foodie-cloud-item?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=UTC
+    #url: jdbc:mysql://192.168.1.103:3306/foodie_shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    password: Passwd123!
+  redis:
+
+#    Redis 单机单实例
+    database: 1
+    host: 192.168.1.131
+    port: 6379
+    password: 123
+
+#    哨兵模式 1主2从
+#    database: 1
+#    password: 123
+#    sentinel:
+#      master: yyf-master
+#      nodes: 192.168.1.101:26379,192.168.1.121:26379,192.168.1.131:26379
+
+#    Redis 集群模式 3主从
+#    password: 123
+#    cluster:
+#      nodes: 192.168.1.201:6379,192.168.1.202:6379,192.168.1.203:6379,192.168.1.204:6379,192.168.1.205:6379,192.168.1.206:6379
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
