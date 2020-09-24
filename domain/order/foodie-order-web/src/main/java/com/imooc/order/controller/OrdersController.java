@@ -103,6 +103,8 @@ public class OrdersController extends BaseController {
         // TODO 临时写的一个调用支付中心的rest ，正常情况应该是发post请求的
 
         // TODO 临时注释的POST请求支付中心
+
+        // FIXME 需要抽取支付中心模块，并导入到order模块下 替换掉 restTemplate
         HttpEntity<MerchantOrdersVO> entity = new HttpEntity<>( merchantOrdersVO, headers );
         ResponseEntity<IMOOCJSONResult> resultResponseEntity = restTemplate.postForEntity( paymentUrl, entity, IMOOCJSONResult.class );
         IMOOCJSONResult paymentResult = resultResponseEntity.getBody();

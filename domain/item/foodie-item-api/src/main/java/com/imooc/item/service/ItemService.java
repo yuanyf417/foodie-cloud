@@ -8,6 +8,7 @@ import com.imooc.item.pojo.ItemsSpec;
 import com.imooc.item.pojo.vo.CommentLevelCountsVO;
 import com.imooc.item.pojo.vo.ShopcartVO;
 import com.imooc.pojo.PagedGridResult;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import java.util.List;
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/
+@FeignClient("foodie-item-service")
 @RequestMapping("item-api")
 public interface ItemService {
 

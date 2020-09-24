@@ -1,30 +1,22 @@
 package com.imooc.order.service.impl.center;
 
-import com.github.pagehelper.PageHelper;
-import com.imooc.enums.OrderStatusEnum;
 import com.imooc.enums.YesOrNo;
 import com.imooc.item.pojo.ItemsComments;
+import com.imooc.item.service.ItemCommentsService;
 import com.imooc.order.mapper.OrderItemsMapper;
 import com.imooc.order.mapper.OrderStatusMapper;
 import com.imooc.order.mapper.OrdersMapper;
-import com.imooc.order.mapper.OrdersMapperCustom;
 import com.imooc.order.pojo.OrderItems;
 import com.imooc.order.pojo.OrderStatus;
 import com.imooc.order.pojo.Orders;
 import com.imooc.order.pojo.bo.center.OrderItemsCommentBO;
-import com.imooc.order.pojo.vo.OrderStatusCountsVO;
 import com.imooc.order.service.center.MyCommentsService;
-import com.imooc.pojo.PagedGridResult;
 import com.imooc.service.BaseService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -58,10 +50,12 @@ public class MyCommentsServiceImpl extends BaseService implements MyCommentsServ
     //    @Autowired
 //    private ItemsCommentsMapperCustom itemsCommentsMapperCustom;
 
+//    @Autowired
+//    private LoadBalancerClient client;
+//    @Autowired
+//    private RestTemplate restTemplate;
     @Autowired
-    private LoadBalancerClient client;
-    @Autowired
-    private RestTemplate restTemplate;
+    private ItemCommentsService service;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -91,12 +85,13 @@ public class MyCommentsServiceImpl extends BaseService implements MyCommentsServ
 
         //itemsCommentsMapperCustom.saveComments( map );
         // 将上述调用 修改为远程方法调用
-        ServiceInstance instance = client.choose( "FOODIE-ITEM-SERVICE" );
-        String url = String.format( "http://%s:%s/item-comments-api/saveComments",
-                instance.getHost(),
-                instance.getPort() );
-        restTemplate.postForLocation( url, map );
+//        ServiceInstance instance = client.choose( "FOODIE-ITEM-SERVICE" );
+//        String url = String.format( "http://%s:%s/item-comments-api/saveComments",
+//                instance.getHost(),
+//                instance.getPort() );
+//        restTemplate.postForLocation( url, map );
 
+        service.saveComments( map );
         // 2. 修改订单评论状态 -> 已评论
 
         Orders updateOrders = new Orders();

@@ -9,7 +9,9 @@ import com.imooc.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.Map;
  * @author: YYF
  * @create: 2020-09-19 21:19
  **/
+@RestController
 public class ItemCommentsServiceImpl extends BaseService implements ItemCommentsService {
 
     @Autowired
@@ -45,7 +48,7 @@ public class ItemCommentsServiceImpl extends BaseService implements ItemComments
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
-    public void saveComments(@RequestParam("map") Map<String, Object> map) {
+    public void saveComments(@RequestBody Map<String, Object> map) {
         itemsCommentsMapperCustom.saveComments( map );
     }
 }

@@ -4,6 +4,7 @@ package com.imooc.order.service;
 import com.imooc.order.pojo.OrderStatus;
 import com.imooc.order.pojo.bo.PlaceOrderBO;
 import com.imooc.order.pojo.vo.OrderVO;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/
+@FeignClient("foodie-order-service")
 @RequestMapping("order-api")
 public interface OrdersService {
 

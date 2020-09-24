@@ -3,6 +3,7 @@ package com.imooc.order.controller.center;
 import com.imooc.controller.BaseController;
 import com.imooc.enums.YesOrNo;
 
+import com.imooc.item.service.ItemCommentsService;
 import com.imooc.order.pojo.OrderItems;
 import com.imooc.order.pojo.Orders;
 import com.imooc.order.pojo.bo.center.OrderItemsCommentBO;
@@ -36,6 +37,9 @@ public class MyCommentsController extends BaseController {
 
     @Autowired
     private MyCommentsService myCommentsService;
+
+    @Autowired
+    private ItemCommentsService itemCommentsService;
 
     @Autowired
     private MyOrdersService myOrdersService;
@@ -91,11 +95,10 @@ public class MyCommentsController extends BaseController {
         }
 
         myCommentsService.saveComment( orderId,userId, commentList );
-
         return IMOOCJSONResult.ok(  );
     }
 
-    /*@ApiOperation(value = "查询评论列表", notes = "查询评论列表", httpMethod = "POST")
+    @ApiOperation(value = "查询评论列表", notes = "查询评论列表", httpMethod = "POST")
     @PostMapping("/query")
     public IMOOCJSONResult query(
             @ApiParam(name = "userId", value = "用户ID", required = true)
@@ -112,11 +115,10 @@ public class MyCommentsController extends BaseController {
         if (pageSize == null) {
             pageSize = COMMON_PAGE_SIZE;
         }
-        // TODO Feign
-        PagedGridResult orderItems = myCommentsService.queryMyComments( userId, page ,pageSize );
+        PagedGridResult orderItems = itemCommentsService.queryMyComments( userId, page ,pageSize );
 
         return IMOOCJSONResult.ok( orderItems );
-    }*/
+    }
 
 
 }

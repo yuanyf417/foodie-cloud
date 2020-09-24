@@ -5,6 +5,7 @@ import com.imooc.order.pojo.OrderItems;
 import com.imooc.order.pojo.bo.center.OrderItemsCommentBO;
 import com.imooc.order.pojo.vo.OrderStatusCountsVO;
 import com.imooc.pojo.PagedGridResult;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/
+@FeignClient("foodie-order-service")
 @RequestMapping("order-comments-api")
 public interface MyCommentsService {
 
@@ -37,17 +39,16 @@ public interface MyCommentsService {
                      @RequestParam("userId") String userId,
                      @RequestBody List<OrderItemsCommentBO> commentBOList);
 
-    // TODO 移到了itemCommentsService 里
-   /* *//**
+    /**
      * 查询我的评论
      * @param userId
      * @param page
      * @param pageSize
      * @return
-     *//*
-    PagedGridResult queryMyComments(@RequestParam("orderId") String userId,
+     */
+    /*PagedGridResult queryMyComments(@RequestParam("orderId") String userId,
                                     @RequestParam(value = "page", required = false) Integer page,
-                                    @RequestParam(value = "pageSize", required = false) Integer pageSize);
+                                    @RequestParam(value = "pageSize", required = false) Integer pageSize);*/
 
     /**
      * 查询我的订单状态数量

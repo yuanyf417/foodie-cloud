@@ -2,7 +2,6 @@ package com.imooc.order.controller.center;
 
 import com.imooc.controller.BaseController;
 import com.imooc.order.pojo.vo.OrderStatusCountsVO;
-import com.imooc.order.service.center.MyCommentsService;
 import com.imooc.order.service.center.MyOrdersService;
 import com.imooc.pojo.IMOOCJSONResult;
 import com.imooc.pojo.PagedGridResult;
@@ -28,8 +27,8 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class MyOrdersController extends BaseController {
 
-    @Autowired
-    private MyCommentsService myCommentsService;
+//    @Autowired
+//    private MyCommentsService myCommentsService;
 
     @Autowired
     private MyOrdersService myOrdersService;
