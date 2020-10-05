@@ -3,7 +3,7 @@ package com.imooc.order.controller.center;
 import com.imooc.controller.BaseController;
 import com.imooc.enums.YesOrNo;
 
-import com.imooc.item.service.ItemCommentsService;
+import com.imooc.order.fallback.itemservice.ItemCommentsFeignClient;
 import com.imooc.order.pojo.OrderItems;
 import com.imooc.order.pojo.Orders;
 import com.imooc.order.pojo.bo.center.OrderItemsCommentBO;
@@ -39,7 +39,8 @@ public class MyCommentsController extends BaseController {
     private MyCommentsService myCommentsService;
 
     @Autowired
-    private ItemCommentsService itemCommentsService;
+    //private ItemCommentsService itemCommentsService;
+    private ItemCommentsFeignClient itemCommentsService;
 
     @Autowired
     private MyOrdersService myOrdersService;
@@ -62,7 +63,7 @@ public class MyCommentsController extends BaseController {
         // 判断订单是否已经评价
         Orders resultData = (Orders) result.getData();
 
-        if (resultData.getIsComment() == YesOrNo.YES.type) {
+        if (resultData.getIsComment().equals( YesOrNo.YES.type )) {
             return IMOOCJSONResult.errorMsg( "该笔订单已经评价过了！" );
         }
 

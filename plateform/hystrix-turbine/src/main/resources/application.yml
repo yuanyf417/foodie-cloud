@@ -17,11 +17,12 @@ management:
 turbine:
   aggregator:
     cluster-config: default
-  #app-config: foodie-user-service,foodie-item-service,foodie-order-service
-  app-config: foodie-order-service
+  app-config: foodie-user-service,foodie-item-service,foodie-order-service
+  #app-config: foodie-order-service
   # 集群名称
-  cluster-name-expression: '"default"'
+  cluster-name-expression: new String("default")
   # 根据host + port 的形式组合进行区分[本地测试]
   combine-host-port: true
   instanceUrlSuffix:
     default: actuator/hystrix.stream
+

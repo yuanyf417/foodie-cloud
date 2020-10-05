@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 /**
+ * 内部的降级（商品中心） 放到item-service里实现
+ *
+ * 调用方的降级（订单中心，调用商品中心服务） 由订单中心定义的降级逻辑
+ *
  * @program: foodie-cloud
  * @description: TODO
  * @author: YYF

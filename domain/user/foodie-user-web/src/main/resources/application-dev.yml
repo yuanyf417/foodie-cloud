@@ -31,3 +31,79 @@ spring:
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# actuator 暴露接口
+management:
+  endpoints:
+    web:
+      exposure:
+        # 生产中只需暴露指定端口
+        include: "*"
+        #include: health, info, xxx
+
+  endpoint:
+    health:
+      show-details: always
+
+  security:
+    enabled: false
+
+
+## hystrix 策略配置文件形式配置[2]
+hystrix:
+  command:
+    # 默认值
+    default:
+      fallback: true
+
+    circuitBreaker:
+      enabled: true
+      ## 请求错误率，高于50% 开启熔断
+      errorThresholdPercentage: 50 #生产上配置略低于50%
+      ## 请求个数5个以上才进行统计
+      requestWindowInMilliseconds: 5
+      ## 10s之后进入半开状态
+      sleepWindowInMilliseconds: 10000
+      ## forceClosed, forceOpen 强制开启/关闭 熔断开关
+
+    execution:
+      timeout:
+        enabled: true
+      ## 可以指定隔离方式是线程池还是信号量
+      isolation:
+        thread:
+          interruptOnTimeout: true
+          interruptOnFutureCancel: true
+          timeoutInMilliseconds: 4000 # hystrix全局超时时间 注意！！！与 feign 的超时策略相互作用，谁先到达 谁生效
+
+    ## 熔断窗口期
+    metrics:
+      rollingStats:
+        timeInMilliseconds: 20000 # 配置时间窗口
+        #numBuckets: 10
+
+#      rollingPercentile:
+#        timeInMilliseconds: 20000 # 配置时间窗口
+#        #numBuckets: 10
+#        bucketSize: 300
+    ## 自定义方法级（user-login）别降级策略
+    loginFail:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

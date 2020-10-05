@@ -11,6 +11,8 @@ import com.imooc.utils.CookieUtils;
 import com.imooc.utils.JsonUtils;
 import com.imooc.utils.MD5Utils;
 import com.imooc.utils.RedisOperator;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
@@ -105,6 +107,33 @@ public class PassportController extends BaseController {
 
     @ApiOperation(value = "用户登录", notes = "用户登录", httpMethod = "POST")
     @PostMapping("/login")
+    @HystrixCommand(
+            commandKey = "loginFail", // 全局唯一的标识服务，默认函数名称
+            groupKey = "password", //全局服务分组，用于组织仪表盘，统计信息(默认类名)
+            fallbackMethod = "loginFail", // 同一个类里，public private 都可以
+            ignoreExceptions = {
+                    IllegalArgumentException.class
+            }, // 列表中的exception，不会触发降级
+            // 线程相关的属性
+            // 线程组，多个服务可以共用一个线程组
+            threadPoolProperties = {
+                    // 核心线程数
+               @HystrixProperty( name = "coreSize", value = "20"),
+                    //size > 0 , LinkedBlockingQueue -> 请求等待队列
+                    // 默认-1 ， SynchronousQueue -> 不存储元素的阻塞队列
+               @HystrixProperty( name = "maxQueueSize", value = "40"),
+                    // 在maxQueueSize=-1的时候无效，队列没有达到maxQueueSize依然拒绝
+               @HystrixProperty( name = "queueSizeRejectionThreshold", value = "15"),
+                    // 统计窗口持续时间(线程池)
+               @HystrixProperty( name = "metrics.rollingStats.timeInMilliseconds", value = "1024"),
+                    // 窗口内桶子的数量(线程池)
+               @HystrixProperty( name = "metrics.rollingStats.numBuckets", value = "18"),
+            }//,
+            // TODO 熔断降级的相关属性也可以配置在这里
+//            commandProperties = {
+//
+//            }
+    )
     public IMOOCJSONResult login(@RequestBody UserBO userBO, HttpServletRequest request, HttpServletResponse response) {
         String username = userBO.getUsername();
         String password = userBO.getPassword();
@@ -145,6 +174,10 @@ public class PassportController extends BaseController {
 
     }
 
+    public IMOOCJSONResult loginFail( UserBO userBO, HttpServletRequest request, HttpServletResponse response, Throwable throwable) {
+
+        return IMOOCJSONResult.errorMsg( "验证码错误(模仿12306降级)" );
+    }
 
     /**
      * 注册登录成功后， 同步cookie和Redis中的购物车数据

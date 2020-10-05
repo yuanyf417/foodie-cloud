@@ -1,0 +1,11 @@
+## 启动顺序：  #1
+
+spring:
+  application:
+    name: hystrix-dashboard
+
+server:
+  port: 20002
+
+
+
