@@ -1,0 +1,11 @@
+# 对称加密配置
+#encrypt:
+#  key: superNewBee
+
+# 非对称加密配置
+encrypt:
+  keyStore:
+    location: classpath:/server.jks
+    password: letmein
+    alias: mytestkey
+    secret: changeme

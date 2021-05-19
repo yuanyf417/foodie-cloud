@@ -23,10 +23,10 @@ spring:
     active: dev
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://192.168.1.103:3306/foodie_shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     username: root
-    password: Passwd123!
+    password: 123456
   hikari:
     connection-timeout: 30000                   #等待连接池分配连接的最大时长（毫秒）
     minimum-idle:                               #最小连接数

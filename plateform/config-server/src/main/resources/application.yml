@@ -1,0 +1,42 @@
+server:
+  port: 20003
+
+spring:
+  application:
+    name: config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yuanyf417/spring-cloud-config.git
+          # 强制拉取资源文件
+          force-pull: true
+          ## 子目录
+          default-label: main
+          # 用于管理不同模块的配置
+          search-paths: '{application}'
+          #username:
+          #password:
+          timeout: 20
+        # 覆盖远端的属性(重载)
+        overrides:
+          test: mytest
+
+
+# actuator 暴露接口
+management:
+  endpoints:
+    web:
+      exposure:
+        # 生产中只需暴露指定端口
+        include: "*"
+        #include: health, info, xxx
+
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka/

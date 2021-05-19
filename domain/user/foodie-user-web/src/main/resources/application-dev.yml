@@ -4,16 +4,19 @@ server:
 spring:
   datasource:
     # 拆分数据源到独立database instance， 或者独立schema
-    url: jdbc:mysql://192.168.1.103:3306/foodie-cloud-item?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=UTC
+    #url: jdbc:mysql://192.168.1.103:3306/foodie-cloud-item?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=UTC
     #url: jdbc:mysql://192.168.1.103:3306/foodie_shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
-    password: Passwd123!
-  redis:
+    #password: Passwd123!
 
-#    Redis 单机单实例
-    database: 1
-    host: 192.168.1.131
-    port: 6379
-    password: 123
+    url: ${mariadb.url}
+    password: ${mariadb.password}
+#  redis:
+#
+##    Redis 单机单实例
+#    database: 1
+#    host: 192.168.1.131
+#    port: 6379
+#    password: 123
 
 #    哨兵模式 1主2从
 #    database: 1
@@ -33,20 +36,23 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # actuator 暴露接口
-management:
-  endpoints:
-    web:
-      exposure:
-        # 生产中只需暴露指定端口
-        include: "*"
-        #include: health, info, xxx
+## 已配置至配置中心
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        # 生产中只需暴露指定端口
+#        include: "*"
+#        #include: health, info, xxx
+#
+#  endpoint:
+#    health:
+#      show-details: always
+#
+#  security:
+#    enabled: false
 
-  endpoint:
-    health:
-      show-details: always
 
-  security:
-    enabled: false
 
 
 ## hystrix 策略配置文件形式配置[2]

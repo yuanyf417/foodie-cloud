@@ -3,6 +3,7 @@ package com.imooc.user.controller;
 import com.imooc.controller.BaseController;
 import com.imooc.pojo.IMOOCJSONResult;
 import com.imooc.pojo.ShopcartBO;
+import com.imooc.user.UserApplicationProperties;
 import com.imooc.user.pojo.Users;
 import com.imooc.user.pojo.bo.UserBO;
 import com.imooc.user.pojo.vo.UsersVO;
@@ -47,6 +48,9 @@ public class PassportController extends BaseController {
     @Autowired
     private RedisOperator redisOperator;
 
+    @Autowired
+    private UserApplicationProperties userApplicationProperties;
+
     @ApiOperation(value = "用户名是否存在", notes = "用户名是否存在", httpMethod = "GET")
     @GetMapping("/usernameIsExist")
     public IMOOCJSONResult userNameIsExist(@RequestParam String username) {
@@ -67,6 +71,11 @@ public class PassportController extends BaseController {
     @ApiOperation(value = "用户注册", notes = "用户注册", httpMethod = "POST")
     @PostMapping("/regist")
     public IMOOCJSONResult register(@RequestBody UserBO userBO, HttpServletRequest request, HttpServletResponse response) {
+
+        if (userApplicationProperties.getDisableRegistration()==null) {
+            logger.info("user registration request blocked - {} ", userBO.getUsername());
+            return IMOOCJSONResult.errorMsg( "当前注册用户过多,请稍候在试..." );
+        }
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPwd = userBO.getConfirmPassword();

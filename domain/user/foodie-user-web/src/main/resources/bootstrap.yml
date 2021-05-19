@@ -7,3 +7,18 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:20000/eureka/
+
+###################################################################
+#
+#  config 配置中心
+#
+###################################################################
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-eureka
+      profile: dev
+      # 分支
+      label: main
