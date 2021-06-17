@@ -5,8 +5,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * @program: foodie-dev
- * @description: 文件上传
+ *  foodie-dev
+ *  文件上传
  * @author: YYF
  * @create: 2020-05-09 11:53
  **/

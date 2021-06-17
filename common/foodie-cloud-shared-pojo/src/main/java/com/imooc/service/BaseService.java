@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: Service基类
+ *  foodie-dev
+ *  Service基类
  * @author: YYF
  * @create: 2020-05-09 18:28
  **/

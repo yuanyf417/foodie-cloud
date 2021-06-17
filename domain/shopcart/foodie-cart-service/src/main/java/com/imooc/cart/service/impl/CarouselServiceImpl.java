@@ -10,8 +10,8 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2019-12-25 22:33
  **/

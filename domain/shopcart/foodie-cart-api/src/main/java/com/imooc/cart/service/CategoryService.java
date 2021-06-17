@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 分类
+ *  foodie-dev
+ *  分类
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/

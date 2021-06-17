@@ -11,8 +11,8 @@ import java.util.Map;
  *
  * 调用方的降级（订单中心，调用商品中心服务） 由订单中心定义的降级逻辑
  *
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-09-19 19:34
  **/

@@ -8,8 +8,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @program: foodie-dev
- * @description: 订单
+ *  foodie-dev
+ *  订单
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/

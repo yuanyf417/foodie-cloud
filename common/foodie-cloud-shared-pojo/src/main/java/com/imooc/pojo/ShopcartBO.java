@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @program: foodie-dev
- * @description: 购物车BO
+ *  foodie-dev
+ *  购物车BO
  * @author: YYF
  * @create: 2020-05-06 18:05
  **/

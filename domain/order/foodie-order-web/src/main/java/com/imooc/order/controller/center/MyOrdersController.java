@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 
 /**
- * @program: foodie-dev
- * @description: 用户中心-订单相关接口
+ *  foodie-dev
+ *  用户中心-订单相关接口
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

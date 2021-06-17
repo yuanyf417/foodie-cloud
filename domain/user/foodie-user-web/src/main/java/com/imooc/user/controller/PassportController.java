@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * @program: foodie-dev
- * @description: 用户登录注册
+ *  foodie-dev
+ *  用户登录注册
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

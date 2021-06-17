@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 地址接口API
+ *  foodie-dev
+ *  地址接口API
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/

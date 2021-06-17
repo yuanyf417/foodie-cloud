@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 /**
- * @program: foodie-cloud
- * @description: ItemCommentsFeignClient的降级工厂
+ *  foodie-cloud
+ *  ItemCommentsFeignClient的降级工厂
  * @author: YYF
  * @create: 2020-10-06 03:25
  **/

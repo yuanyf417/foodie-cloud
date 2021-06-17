@@ -12,8 +12,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2019-12-21 14:16
  **/

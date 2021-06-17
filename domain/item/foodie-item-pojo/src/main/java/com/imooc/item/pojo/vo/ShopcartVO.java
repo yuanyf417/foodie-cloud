@@ -3,8 +3,8 @@ package com.imooc.item.pojo.vo;
 import lombok.Data;
 
 /**
- * @program: foodie-dev
- * @description: 二级分类VO
+ *  foodie-dev
+ *  二级分类VO
  * @author: YYF
  * @create: 2020-05-01 01:31
  **/

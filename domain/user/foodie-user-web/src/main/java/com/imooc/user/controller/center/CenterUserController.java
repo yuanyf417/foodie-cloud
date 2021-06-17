@@ -40,8 +40,8 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @program: foodie-dev
- * @description: 用户信息
+ *  foodie-dev
+ *  用户信息
  * @author: YYF
  * @create: 2020-05-09 01:55
  **/

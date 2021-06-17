@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2020-05-09 01:59
  **/

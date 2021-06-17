@@ -20,8 +20,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @program: foodie-dev
- * @description: 购物车接口
+ *  foodie-dev
+ *  购物车接口
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 评论
+ *  foodie-dev
+ *  评论
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/

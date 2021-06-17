@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-09-20 13:22
  **/

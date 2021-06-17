@@ -1,7 +1,7 @@
 package com.imooc.enums;
 
 /**
- * @Description: 支付方式 枚举
+ *  支付方式 枚举
  */
 public enum PayMethod {
 

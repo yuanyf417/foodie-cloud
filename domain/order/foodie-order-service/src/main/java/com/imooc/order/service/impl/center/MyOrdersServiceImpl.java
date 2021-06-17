@@ -27,8 +27,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @program: foodie-dev
- * @description: 我的订单实现类
+ *  foodie-dev
+ *  我的订单实现类
  * @author: YYF
  * @create: 2020-05-09 13:45
  **/

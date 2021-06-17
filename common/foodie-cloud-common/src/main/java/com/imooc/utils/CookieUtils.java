@@ -16,7 +16,7 @@ public final class CookieUtils {
 	
 	/**
 	 * 
-	 * @Description: 得到Cookie的值, 不编码
+	 *  得到Cookie的值, 不编码
 	 * @param request
 	 * @param cookieName
 	 * @return
@@ -27,7 +27,7 @@ public final class CookieUtils {
     
     /**
      * 
-     * @Description: 得到Cookie的值
+     *  得到Cookie的值
      * @param request
      * @param cookieName
      * @param isDecoder
@@ -58,7 +58,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 得到Cookie的值
+     *  得到Cookie的值
      * @param request
      * @param cookieName
      * @param encodeString
@@ -85,7 +85,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 设置Cookie的值 不设置生效时间默认浏览器关闭即失效,也不编码
+     *  设置Cookie的值 不设置生效时间默认浏览器关闭即失效,也不编码
      * @param request
      * @param response
      * @param cookieName
@@ -98,7 +98,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 设置Cookie的值 在指定时间内生效,但不编码
+     *  设置Cookie的值 在指定时间内生效,但不编码
      * @param request
      * @param response
      * @param cookieName
@@ -112,7 +112,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 设置Cookie的值 不设置生效时间,但编码
+     *  设置Cookie的值 不设置生效时间,但编码
      * 在服务器被创建，返回给客户端，并且保存客户端
      * 如果设置了SETMAXAGE(int seconds)，会把cookie保存在客户端的硬盘中
      * 如果没有设置，会默认把cookie保存在浏览器的内存中
@@ -130,7 +130,7 @@ public final class CookieUtils {
 
    /**
     * 
-    * @Description: 设置Cookie的值 在指定时间内生效, 编码参数
+    *  设置Cookie的值 在指定时间内生效, 编码参数
     * @param request
     * @param response
     * @param cookieName
@@ -145,7 +145,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 设置Cookie的值 在指定时间内生效, 编码参数(指定编码)
+     *  设置Cookie的值 在指定时间内生效, 编码参数(指定编码)
      * @param request
      * @param response
      * @param cookieName
@@ -160,7 +160,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 删除Cookie带cookie域名
+     *  删除Cookie带cookie域名
      * @param request
      * @param response
      * @param cookieName
@@ -174,7 +174,7 @@ public final class CookieUtils {
     
     /**
      * 
-     * @Description: 设置Cookie的值，并使其在指定时间内生效
+     *  设置Cookie的值，并使其在指定时间内生效
      * @param request
      * @param response
      * @param cookieName
@@ -209,7 +209,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 设置Cookie的值，并使其在指定时间内生效
+     *  设置Cookie的值，并使其在指定时间内生效
      * @param request
      * @param response
      * @param cookieName
@@ -244,7 +244,7 @@ public final class CookieUtils {
 
     /**
      * 
-     * @Description: 得到cookie的域名
+     *  得到cookie的域名
      * @return
      */
     private static final String getDomainName(HttpServletRequest request) {

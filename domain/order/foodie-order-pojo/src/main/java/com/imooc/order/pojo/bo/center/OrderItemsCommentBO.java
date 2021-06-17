@@ -4,8 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @program: foodie-dev
- * @description: 用户中心-发表评论BO
+ *  foodie-dev
+ *  用户中心-发表评论BO
  * @author: YYF
  * @create: 2020-05-09 16:24
  **/

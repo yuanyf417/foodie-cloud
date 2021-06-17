@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 我的订单
+ *  foodie-dev
+ *  我的订单
  * @author: YYF
  * @create: 2020-05-01 01:31
  **/

@@ -6,8 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * @program: foodie-cloud
- * @description: EurekaServer 启动类
+ *  foodie-cloud
+ *  EurekaServer 启动类
  * @author: YYF
  * @create: 2020-09-19 17:48
  **/

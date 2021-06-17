@@ -24,8 +24,8 @@ import java.util.List;
 
 
 /**
- * @program: foodie-dev
- * @description: 我的评价相关接口
+ *  foodie-dev
+ *  我的评价相关接口
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

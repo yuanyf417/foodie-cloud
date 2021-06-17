@@ -9,8 +9,8 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-10-06 00:19
  **/

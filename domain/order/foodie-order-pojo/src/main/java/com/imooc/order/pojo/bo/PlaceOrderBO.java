@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @program: foodie-cloud
- * @description: 下单
+ *  foodie-cloud
+ *  下单
  * @author: YYF
  * @create: 2020-09-20 01:10
  **/

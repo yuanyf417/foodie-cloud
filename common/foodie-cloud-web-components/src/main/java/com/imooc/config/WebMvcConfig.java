@@ -9,8 +9,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2019-12-21 14:11
  **/

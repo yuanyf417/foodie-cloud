@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2020-05-09 13:07
  **/

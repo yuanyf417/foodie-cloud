@@ -5,8 +5,8 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @program: foodie-dev
- * @description: 商品评论VO
+ *  foodie-dev
+ *  商品评论VO
  * @author: YYF
  * @create: 2020-05-01 01:31
  **/

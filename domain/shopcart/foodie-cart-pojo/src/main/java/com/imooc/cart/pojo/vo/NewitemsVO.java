@@ -5,8 +5,8 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 首页最新商品VO
+ *  foodie-dev
+ *  首页最新商品VO
  * @author: YYF
  * @create: 2020-05-01 01:31
  **/

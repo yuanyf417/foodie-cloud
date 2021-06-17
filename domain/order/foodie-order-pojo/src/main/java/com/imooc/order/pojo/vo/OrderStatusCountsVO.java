@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @program: foodie-dev
- * @description: 订单状态数量VO
+ *  foodie-dev
+ *  订单状态数量VO
  * @author: YYF
  * @create: 2020-05-09 23:25
  **/

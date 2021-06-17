@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * @program: foodie-dev
- * @description: 日志AOP
+ *  foodie-dev
+ *  日志AOP
  * @author: YYF
  * @create: 2019-12-21 17:07
  **/

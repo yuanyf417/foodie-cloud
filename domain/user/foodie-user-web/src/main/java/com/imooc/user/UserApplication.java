@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Profile;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-09-19 23:46
  **/

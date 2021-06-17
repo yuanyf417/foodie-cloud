@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @program: foodie-dev
- * @description: 用户中心
+ *  foodie-dev
+ *  用户中心
  * @author: YYF
  * @create: 2020-05-09 01:55
  **/

@@ -1,7 +1,7 @@
 package com.imooc.enums;
 
 /**
- * @Description: 订单状态 枚举
+ *  订单状态 枚举
  */
 public enum OrderStatusEnum {
 

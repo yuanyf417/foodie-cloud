@@ -17,8 +17,8 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.Date;
 
 /**
- * @program: foodie-dev
- * @description: TODO
+ *  foodie-dev
+ *  TODO
  * @author: YYF
  * @create: 2019-12-21 13:13
  **/

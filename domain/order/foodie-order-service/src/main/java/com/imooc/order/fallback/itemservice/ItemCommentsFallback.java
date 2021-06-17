@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Map;
 
 /**
- * @program: foodie-cloud
- * @description: ItemCommentsFeignClient的降级类
+ *  foodie-cloud
+ *  ItemCommentsFeignClient的降级类
  * @author: YYF
  * @create: 2020-10-06 03:19
  **/

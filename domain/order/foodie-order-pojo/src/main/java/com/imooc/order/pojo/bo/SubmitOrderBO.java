@@ -4,8 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @program: foodie-dev
- * @description: 订单BO
+ *  foodie-dev
+ *  订单BO
  * @author: YYF
  * @create: 2020-05-07 09:46
  **/

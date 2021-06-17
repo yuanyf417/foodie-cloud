@@ -579,7 +579,7 @@ public class DateUtil {
 
     /**
      *
-     * @Description: 获得本月的第一天日期
+     *  获得本月的第一天日期
      * @return
      *
      * @author leechenxiang
@@ -600,7 +600,7 @@ public class DateUtil {
 
     /**
      *
-     * @Description: 获得本月的最后一天日期
+     *  获得本月的最后一天日期
      * @return
      *
      * @author leechenxiang
@@ -618,7 +618,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 判断字符串日期是否匹配指定的格式化日期
+     *  判断字符串日期是否匹配指定的格式化日期
      */
     public static boolean isValidDate(String strDate, String formatter) {
         SimpleDateFormat sdf = null;

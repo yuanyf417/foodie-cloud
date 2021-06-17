@@ -6,8 +6,8 @@ import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-10-06 00:37
  **/

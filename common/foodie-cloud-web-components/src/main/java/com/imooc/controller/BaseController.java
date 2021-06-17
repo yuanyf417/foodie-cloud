@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.File;
 
 /**
- * @program: foodie-dev
- * @description: 基类Controller
+ *  foodie-dev
+ *  基类Controller
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

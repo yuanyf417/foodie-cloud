@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 地址相关接口
+ *  foodie-dev
+ *  地址相关接口
  * @author: YYF
  * @create: 2019-12-19 20:56
  **/

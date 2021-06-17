@@ -24,8 +24,8 @@ import org.springframework.cloud.openfeign.FeignClient;
  *      优点： 启动的时候直接扫包即可，不用加载指定的接口
  *      缺点： 任何情况下，服务调用者都要声明一个@FeignClient接口
  *
- * @program: foodie-cloud
- * @description: TODO
+ *  foodie-cloud
+ *  TODO
  * @author: YYF
  * @create: 2020-10-06 02:46
  **/

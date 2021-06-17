@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
- * @program: foodie-dev
- * @description: 轮播图
+ *  foodie-dev
+ *  轮播图
  * @author: YYF
  * @create: 2019-12-25 22:31
  **/
